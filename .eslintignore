@@ -1,0 +1,4 @@
+src/matricies.mjs
+src/tesseract.mjs
+node_modules
+dist
