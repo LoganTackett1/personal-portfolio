@@ -1,4 +1,4 @@
-src/matricies.mjs
-src/tesseract.mjs
+src/matricies.js
+src/tesseract.js
 node_modules
 dist
