@@ -138,7 +138,7 @@ const drawLine = function (ctx, x1, y1, z1, x2, y2, z2, n, thickScale) {
     ctx.beginPath();
     ctx.moveTo(x1 + i * deltaX, y1 + i * deltaY);
     ctx.lineTo(x1 + (i + 1) * deltaX, y1 + (i + 1) * deltaY);
-    ctx.strokeStyle = "black";
+    ctx.strokeStyle = "rgb(227,224,243)";
     ctx.lineWidth = (initThick + i * deltaThick) * (thickScale / 700);
     ctx.stroke();
     ctx.closePath();

@@ -31,3 +31,14 @@ setInterval(() => {
   FOUR.drawCube(ctx, canvas, Tesseract);
   wAngle += wDelta;
 }, 16);
+
+const navBar = document.getElementById("navbar");
+window.addEventListener("scroll", () => {
+  const navY = navBar.getBoundingClientRect().y;
+  console.log(navY);
+  if (navY <= 10) {
+    navBar.classList.add("sticky-true");
+  } else {
+    navBar.classList.remove("sticky-true");
+  }
+});
