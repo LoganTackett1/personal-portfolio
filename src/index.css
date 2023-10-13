@@ -101,6 +101,7 @@ header > h1 > strong {
   border: solid #009063 3px;
   border-radius: 10px;
   background: transparent;
+  transition: margin-left 0.33s;
 }
 
 #navbar-container {
@@ -111,7 +112,8 @@ header > h1 > strong {
   justify-content: flex-start;
   align-items: flex-start;
   background-color: #009063;
-  transition: width 0.33s;
+  transition: transform 0.33s;
+  transform-origin: left;
 }
 
 #navbar-container > button {
@@ -124,7 +126,11 @@ header > h1 > strong {
 }
 
 #navbar-container.nav-off {
-  width: 0px;
+  transform: scaleX(0);
+}
+
+#navbar-button.nav-off {
+  margin-left: calc(10px - 50%);
 }
 
 .bar {

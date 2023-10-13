@@ -49,6 +49,7 @@ const navBarBtn = document.getElementById("navbar-button");
 const navContainer = document.getElementById("navbar-container");
 navBarBtn.addEventListener("click", () => {
   navContainer.classList.toggle("nav-off");
+  navBarBtn.classList.toggle("nav-off");
 });
 
 setInterval(() => {
