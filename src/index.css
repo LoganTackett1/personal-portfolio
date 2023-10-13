@@ -48,13 +48,12 @@ canvas {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
 }
 
 header {
   width: 100%;
   height: 33vh;
-  margin-top: calc(33vh - 70px);
+  margin-top: 33vh;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -76,30 +75,60 @@ header > h1 > strong {
 }
 
 #navbar {
-  position: sticky;
-  box-sizing: border-box;
-  padding-left: 15px;
+  z-index: 3;
+  position: fixed;
   width: 100%;
-  height: 70px;
-  top: 0;
-  display: grid;
-  grid: 1fr/1fr;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #navbar-button {
-  grid-area: 1/1/-1/-1;
+  margin-left: 10px;
+  margin-top: 10px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
   width: 40px;
   height: 40px;
-  justify-self: left;
-  align-self: center;
   border: solid #009063 3px;
   border-radius: 10px;
   background: transparent;
 }
 
 #navbar-container {
-  grid-area: 1/1/-1/-1;
-  justify-self: right;
-  align-self: center;
-  visibility: hidden;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  background-color: #009063;
+  transition: width 0.33s;
+}
+
+#navbar-container > button {
+  margin-left: 20px;
+  margin-top: 20px;
+  font-size: 30px;
+  color: white;
+  background: transparent;
+  border: none;
+}
+
+#navbar-container.nav-off {
+  width: 0px;
+}
+
+.bar {
+  width: 25px;
+  height: 3px;
+  background-color: #009063;
 }

@@ -35,10 +35,15 @@ setInterval(() => {
 const navBar = document.getElementById("navbar");
 window.addEventListener("scroll", () => {
   const navY = navBar.getBoundingClientRect().y;
-  console.log(navY);
   if (navY <= 10) {
     navBar.classList.add("sticky-true");
   } else {
     navBar.classList.remove("sticky-true");
   }
+});
+
+const navBarBtn = document.getElementById("navbar-button");
+const navContainer = document.getElementById("navbar-container");
+navBarBtn.addEventListener("click", () => {
+  navContainer.classList.toggle("nav-off");
 });
